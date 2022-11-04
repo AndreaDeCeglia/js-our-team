@@ -58,7 +58,7 @@ const team = [
     //printing on HTML the objects' values
     document.getElementById('cards-container').innerHTML +=
     `  
-    <div class="card cols-3" style="width: 18rem;">
+    <div class="card col-3 m-5">
         
         <img src="${path + thisObject.image}" class="card-img-top" alt="">      
         <div class="card-body">
