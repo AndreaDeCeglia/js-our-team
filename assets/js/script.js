@@ -46,7 +46,7 @@ const team = [
   // array's ending
 
   //imgs' path variable
-  let path = `./../img/`;
+  let path = `./assets/img/`;
   console.log(`the path in order to reach the images is :`, path);
 
   //loop for check the array's elements
@@ -55,4 +55,23 @@ const team = [
     // getting specific obj each loop
     let thisObject = team[i];
     console.log(`name is :`, thisObject.name, ` role is :`, thisObject.role, `img name is :`, thisObject.image);
+    //printing on HTML the objects' values
+    document.getElementById('cards-container').innerHTML +=
+    `  
+    <div class="card cols-3" style="width: 18rem;">
+        
+        <img src="${path + thisObject.image}" class="card-img-top" alt="">      
+        <div class="card-body">
+        
+            <h5 class="card-title text-center">
+                ${thisObject.name}
+            </h5>
+        
+            <p class="card-text text-center">
+                ${thisObject.role}
+            </p>
+      
+        </div>
+    </div>
+    `;
   }
